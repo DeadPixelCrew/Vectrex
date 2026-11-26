@@ -2,7 +2,7 @@
 // The page and its files are served from this cache straight away, and refreshed from the
 // network in the background, so an update shows up on the next visit. Offline, the cache is used.
 const CACHE = 'vectrex-player';
-const FILES = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
+const FILES = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png', './favicon.ico', './favicon-32.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
